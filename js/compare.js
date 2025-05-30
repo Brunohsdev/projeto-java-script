@@ -6,13 +6,24 @@ class Car {
    
 
     constructor(nome, preco, alturaCacamba, alturaVeiculo, alturaSolo, capacidadeCarga, motor, potencia, volumeCacamba, roda, image){
-       
+       this.nome = nome;
+       this.preco = preco;
+       this.alturaCacamba = alturaCacamba;
+       this.alturaVeiculo = alturaVeiculo;
+       this.alturaSolo = alturaSolo;
+       this.capacidadeCarga = capacidadeCarga;
+       this.motor = motor;
+       this.potencia = potencia;
+       this.volumeCacamba = volumeCacamba;
+       this.roda = roda;
+       this.image = image;
     }
 } 
 
 // search on array if exist carClass returning 1 if not return -1
 function GetCarArrPosition(arr, carClass) {
     for(let i = 0; i < arr.length; i++){
+        carArr.push(carClass);
         if(arr[i].nome  === carClass.nome)
             return i;
     }
@@ -20,9 +31,9 @@ function GetCarArrPosition(arr, carClass) {
 }
 
 function SetCarToCompare(el, carClass) {
-   
+    let index = GetCarArrPosition
     if(carClass instanceof Car){       
-        if(el.checked){
+        if(el.checked == true){
                 
             
         } else {
