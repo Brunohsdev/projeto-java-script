@@ -1,3 +1,25 @@
+//for table
+const tabela = document.getElementById('compare');
+//comparadores
+const comparacao_img0 = document.getElementById('compare_image_0');
+const comparacao_img1 = document.getElementById('compare_image_1');
+const comparacao_modelo0 = document.getElementById('compare_modelo_0');
+const comparacao_modelo1 = document.getElementById('compare_modelo_1');
+const comparacao_altura0 = document.getElementById('compare_alturacacamba_0');
+const comparacao_altura1 = document.getElementById('compare_alturacacamba_1');
+const comparacao_altura_cacamba0 = document.getElementById('compare_alturacacamba_0');
+const comparacao_altura_cacamba1 = document.getElementById('compare_alturacacamba_1');
+const comparacao_altura_do_solo0 = document.getElementById('compare_alturasolo_0');
+const comparacao_altura_do_solo1 = document.getElementById('compare_alturasolo_1');
+const comparacao_capacidade_carga0 = document.getElementById('compare_capacidadecarga_0');
+const comparacao_cacacidade_carga1 = document.getElementById('compare_capacidadecarga_1');
+const comparacao_motor0 = document.getElementById('compare_motor_0');
+const comparacao_motor1 = document.getElementById('compare_motor_1');
+const compare_potencia_0 = document.getElementById('compare_potencia_0');
+const compare_potencia_1 = document.getElementById('compare_potencia_1');
+const compare_volumecacamba_0 = document.getElementById('compare_volumecacamba_0');
+const compare_volumecacamba_1 = document.getElementById('compare_volumecacamba_1');
+
 
 //car
 let carArr = [];
@@ -31,7 +53,7 @@ function GetCarArrPosition(arr, carClass) {
 }
 
 function SetCarToCompare(el, carClass) {
-    let index = GetCarArrPosition
+    let index = GetCarArrPosition;
     if(carClass instanceof Car){       
         if(el.checked == true){
                 
@@ -42,7 +64,7 @@ function SetCarToCompare(el, carClass) {
     } else {
         throw "You need set a Car Class";
     }
-}
+} 
 
 function ShowCompare() {
     if(carArr.length < 2) {

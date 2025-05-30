@@ -1,4 +1,6 @@
-
+.iframe{
+    width: 100%;
+}
 ul.modelcars {
     display: block;
     text-align: center;
@@ -22,7 +24,21 @@ img.photocar {
     height: 30px;
     border: 1px solid #1b357e;
 }
-
+.container-principal{
+    width: 100%;
+}
+.modelcars{
+    display: flex;
+    width: 100%;
+    margin: 2rem;
+   
+}
+.modelcars li{
+    padding: 0rem 3rem;
+}
+.infocar{
+    padding: 2rem 0;
+}
 .infocar div {
     display: inline-block;
 }
