@@ -25,8 +25,6 @@ const compare_volumecacamba_1 = document.getElementById('compare_volumecacamba_1
 let carArr = [];
 
 class Car {
-   
-
     constructor(nome, preco, alturaCacamba, alturaVeiculo, alturaSolo, capacidadeCarga, motor, potencia, volumeCacamba, roda, image){
        this.nome = nome;
        this.preco = preco;
@@ -45,21 +43,20 @@ class Car {
 // search on array if exist carClass returning 1 if not return -1
 function GetCarArrPosition(arr, carClass) {
     for(let i = 0; i < arr.length; i++){
-        carArr.push(carClass);
         if(arr[i].nome  === carClass.nome)
             return i;
     }
     return -1;
 }
-
+//coloca o objeto carro dentro da lista
 function SetCarToCompare(el, carClass) {
-    let index = GetCarArrPosition;
+    // let index = GetCarArrPosition(el, carClass);
     if(carClass instanceof Car){       
         if(el.checked == true){
-                
+               carArr.push(carClass);
             
         } else {
-          
+            carArr.splice(carClass);
         } 
     } else {
         throw "You need set a Car Class";
