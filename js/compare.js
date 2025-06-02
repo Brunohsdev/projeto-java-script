@@ -48,7 +48,7 @@ function GetCarArrPosition(arr, carClass) {
     }
     return -1;
 }
-
+//coloca o objeto carro dentro da lista
 function SetCarToCompare(el, carClass) {
     let index = GetCarArrPosition(carArr, carClass);
     if(carClass instanceof Car){       
