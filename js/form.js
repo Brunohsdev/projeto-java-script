@@ -2,7 +2,14 @@
 //class contato
 
 class contato {
-    
+    constructor(nome,sobrenome, email,cpf,telefone,contato){
+        this._nome = nome;
+        this._sobrenome = sobrenome;
+        this._email = email;
+        this._cpf = cpf;
+        this._telefone = telefone;
+        this._contato = contato;
+    }
 }
 
 function Post(form) {
