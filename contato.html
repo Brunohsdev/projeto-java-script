@@ -8,7 +8,6 @@
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
-    <script src="js/form.js"></script>
 </head>
 <body>
     <header>       
@@ -28,7 +27,7 @@
                 </li>
             </ul>
         </nav>
-
+        
     </header>
     <main>
         <div class="forms">
@@ -37,11 +36,11 @@
             </div>
             <div>
                 <h2 class="titulo">Sobre Você</h2>
-            <form onsubmit="Post(this);">
-                <input type="text" name="nome" placeholder="NOME*" class="fordform" required>
-                <input type="text" name="email" placeholder="E-MAIL*" class="fordform" required>
-                <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
-                <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
+                <form onsubmit="Post(this);">
+                    <input type="text" name="nome" id="nomeid" placeholder="NOME*" class="fordform" required>
+                    <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
+                    <input type="text" name="cpf" placeholder="CPF*" class="fordform" required>
+                <input type="email" name="email" placeholder="E-MAIL*" class="fordform" required>
                 <input type="text" name="telefone" placeholder="TELEFONE*" class="fordform" required>
                 <select name="contato" class="fordform" required>
                     <option selected>COMO DESEJA SER CONTATADO</option>
@@ -49,14 +48,15 @@
                     <option>E-MAIL</option>
                 </select>
             <button type="submit">Enviar</button>
-            </form>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <nav id="social">
-            <ul>
-                <li><span class="redesociais">Redes Sociais</span></li>
+            <div id="msg-de-envio"></div>
+        </form>
+    </div>
+</div>
+</main>
+<footer>
+    <nav id="social">
+        <ul>
+            <li><span class="redesociais">Redes Sociais</span></li>
                 <li><a href="#" title="Facebook"><img src="img/facebook-50.png"></a></li>
                 <li><a href="#" title="YouTube"><img src="img/youtube-squared-50.png"></a></li>
                 <li><a href="#" title="Instagram"><img src="img/instagram-logo-50.png"></a></li>
@@ -66,5 +66,6 @@
            <img src="img/ford-96.png" width="70"  />
         </div>
     </footer>    
+    <script src="js/form.js" ></script>
 </body>
 </html>
