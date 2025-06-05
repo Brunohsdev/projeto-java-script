@@ -36,6 +36,7 @@
             </div>
             <div>
                 <h2 class="titulo">Sobre Você</h2>
+                <div>
                 <form onsubmit="Post(this);">
                     <input type="text" name="nome" id="nomeid" placeholder="NOME*" class="fordform" required>
                     <input type="text" name="sobrenome" placeholder="SOBRENOME*" class="fordform" required>
@@ -47,10 +48,25 @@
                     <option>TELEFONE</option>
                     <option>E-MAIL</option>
                 </select>
-            <button type="submit">Enviar</button>
-            <div id="msg-de-envio"></div>
-        </form>
-    </div>
+                <button type="submit">Enviar</button>
+                <div class="container">
+                    <p>Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A
+                        qualquer momento, será possível editar ou remover tais dados. <a href="https://www.ford.com.br/politica-de-privacidade/">Termos e Condições.</a></p>
+                        <div class="checkbox">
+                        <div>
+                        <input type="checkbox">
+                        <span>Sim, li e concordo com os vossos termos.</span>
+                        </div>
+                        <div>
+                        <input type="checkbox">
+                        <span>Sim, também quero receber descontos e novidades.</span>
+                        </div>
+                    </div>
+            </form>
+            </div>
+        </div>
+                </div>
+                <div id="msg-de-envio"></div>
 </div>
 </main>
 <footer>

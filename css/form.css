@@ -34,6 +34,26 @@ main div {
 .forms {
     display: block;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    width: 320px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.checkbox div{
+    padding: 0;
 }
 
 h2 {
@@ -42,11 +62,15 @@ h2 {
 }
 
 
+.checkbox span{
+    font-weight: 100;
+    font-size: 12px;
+}
 button {
     width: 200px;
     height: 40px;
-    margin-right: 8px;
-    float: right;
+    margin-left: 8px;
+    float: left;
 }
 
 .titulo {
