@@ -31,10 +31,14 @@ main div {
     padding-bottom: 30px;
 }
 
-.forms {
+.forms{
     display: block;
-    text-align: center;
     align-items: center;
+    flex-direction: column;
+    
+}
+.formulario{
+    display: flex;
     flex-direction: column;
     
 }
@@ -45,6 +49,7 @@ main div {
     width: 320px;
     font-size: 14px;
     font-weight: 100;
+    gap: 5px;
 }
 
 .checkbox{
