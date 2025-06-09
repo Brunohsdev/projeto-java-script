@@ -1,4 +1,6 @@
 const mensagem = document.getElementById("msg-de-envio");
+const termos = document.getElementById("termos_e_condicoes");
+const button_enviar = document.getElementById("enviar");
 //class contato
 
 class Contato {
@@ -14,8 +16,8 @@ class Contato {
 
 
 
-function Post(form) {
-
+function Post(event,form) {
+  event.preventDefault();
   let data = new Contato(form.elements.namedItem("nome").value,
             form.elements.namedItem("sobrenome").value, 
             form.elements.namedItem("email").value, 
@@ -34,33 +36,47 @@ function Post(form) {
 
   // Verifica se o email contém "@" (validação básica)
   if (!data.email.includes("@") || data.email.length < 4) {
+    alert("EMAIL INVÁLIDO");
     mensagem.innerHTML = "<p>Digite um email válido.</p>";
     mensagem.style.color = "red";
     return false;
   }
   if(isNaN(data.cpf) || data.cpf.length != 11 ){
-  // Se tudo estiver certo
-  mensagem.innerHTML = "<p>Cpf inválido</p>"
-  mensagem.style.color = "red";
-  return false;
-  }
-  if( data.telefone.length != 8 || isNaN(data.telefone)){
-    mensagem.innerHTML = "<p>Telefone Inválido</p>"
+    alert("CPF INVÁLIDO");
+    mensagem.innerHTML = "<p>Cpf inválido</p>"
     mensagem.style.color = "red";
     return false;
   }
-  
-  mensagem.innerHTML = "<p>Formulário enviado com sucesso!</p>";
-  mensagem.style.color = "green";
-  console.log(data);
-  
-  
-      var nome = document.getElementById("nomeid");
-        let mensagemBemVindo = `Obrigado sr(a)  ${nome.value}  os seus dados foram encaminhados com sucesso`;
-      if (nome.value != "") {
-          alert(mensagemBemVindo);
-      }
+  if( data.telefone.length <= 7 || isNaN(data.telefone) ){
+      alert("TELEFONE INVÁLIDO");
+      mensagem.innerHTML = "<p>Telefone Inválido</p>";
+      mensagem.style.color = "red";
+      return false;
   }
+  
+  if(!termos.checked){
+    alert("Preencha o campo de aceitação de compromissos!")
+    termos.setAttribute.required = true;
+    return false;
+  }
+  if(termos.checked){
+    button_enviar.style.backgroundColor = 'blue';
+
+  }
+   
+    button_enviar.setAttribute.disabled = false;
+   
+        var nome = document.getElementById("nomeid");
+        let mensagemBemVindo = `Obrigado sr(a)  ${nome.value}  os seus dados foram encaminhados com sucesso`;
+        if (nome.value != "") {
+            alert(mensagemBemVindo);
+            form.reset();
+            mensagem.innerHTML = "<p></p>";
+        }
+
+  }
+  
+  
            
   
 
