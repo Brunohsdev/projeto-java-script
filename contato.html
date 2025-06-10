@@ -50,19 +50,24 @@
                 </select>
                 <div class="container">
                     <p>Os dados serão mantidos em nossa base de dados, só enquanto for desejado por você. A
-                        qualquer momento, será possível editar ou remover tais dados. <a href="https://www.ford.com.br/politica-de-privacidade/">Termos e Condições.</a></p>
+                        qualquer momento, será possível editar ou remover tais dados. </p>
                         <div class="checkbox">
                         <div>
-                        <input type="checkbox" id="termos_e_condicoes" required>
-                        <span>Sim, li e concordo com os vossos termos.</span>
+                        <input type="checkbox" id="checkbox_de_termos_e_condicoes" aria-required="true">
+                        <span> Sim, li e concordo com os <a href="https://www.ford.com.br/politica-de-privacidade/" target="_blank">Termos e Condições.</a></span>
+                        <div class="info" style="display: flex; align-items: center;">
+                        <img src="img/info.png" alt="" style="height: 13px; width: 13px;"><span style="color: red;">Aceite os termos e condições para continuar.</span>
                         </div>
+                    </div>
                         <div>
-                        <input type="checkbox">
+                        <input type="checkbox" id="checkbox_receber_novidades">
                         <span>Sim, também quero receber descontos e novidades.</span>
                         </div>
                     </div>
                     </div>
-                <button type="submit" id="enviar" style="background-color: gray;">Enviar</button>
+                    <br>
+                    <br>
+                <button type="submit" id="enviar" disabled>Enviar</button>
             </form>
             </div>
         </div>
@@ -84,5 +89,13 @@
         </div>
     </footer>    
     <script src="js/form.js" ></script>
+    <script>
+        const checkbox = document.querySelector('#checkbox_de_termos_e_condicoes');
+        const button = document.querySelector('#enviar');
+        const informacoes = document.querySelector(".info")
+    termos.addEventListener("change", () => {
+        button.disabled = !checkbox.checked; 
+      });
+    </script>
 </body>
 </html>

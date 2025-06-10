@@ -1,5 +1,5 @@
 const mensagem = document.getElementById("msg-de-envio");
-const termos = document.getElementById("termos_e_condicoes");
+const termos = document.getElementById("checkbox_de_termos_e_condicoes");
 const button_enviar = document.getElementById("enviar");
 //class contato
 
@@ -14,7 +14,9 @@ class Contato {
     }
 }
 
-
+termos.addEventListener("change", () => {
+  button_enviar.disabled = !checkbox.checked;
+});
 
 function Post(event,form) {
   event.preventDefault();
