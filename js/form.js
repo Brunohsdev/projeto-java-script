@@ -55,17 +55,7 @@ function Post(event,form) {
       mensagem.style.color = "red";
       return false;
   }
-  
-  if(!termos.checked){
-    alert("Preencha o campo de aceitação de compromissos!")
-    termos.setAttribute.required = true;
-    return false;
-  }
-  if(termos.checked){
-    button_enviar.style.backgroundColor = 'blue';
-
-  }
-   
+     
     button_enviar.setAttribute.disabled = false;
    
         var nome = document.getElementById("nomeid");

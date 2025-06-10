@@ -86,6 +86,11 @@ button {
     color: #666;
     cursor: not-allowed;
 }
+.erro {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
 .titulo {
     margin-left: 8px;
 }
@@ -94,3 +99,4 @@ strong{
     font-weight: bold;
     font-size: px;
 }
+
